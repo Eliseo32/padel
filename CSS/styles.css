@@ -1,0 +1,686 @@
+/* Base */
+body.home {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white; /* Color del texto en la página principal */
+    position: relative;
+    background-image: url(utils/fondo.png); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen */
+    background-repeat: no-repeat; /* Para evitar que la imagen se repita */
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    position: relative;
+    /* Eliminamos el background-image general del body */
+    background-color: #000; /* Añade un color de fondo de respaldo */
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* Ya no necesitamos la imagen de fondo aquí */
+    z-index: -1;
+}
+
+/* ... el resto de tu _base.css ... */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.home {
+    /* El fondo ahora está en body */
+    color: white; /* Color del texto en la página principal */
+}
+
+.inscripcion-page {
+    background: url('https://images.unsplash.com/photo-1589187155473-4c11d54a62cd?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    color: #333;
+}
+
+/* Layout */
+
+footer {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* header */
+
+.banner {
+    background: linear-gradient(to left, #000000, #000000); /* Degradado de derecha a izquierda */
+    color: #fff;
+    margin-top: 10px;
+    padding: 20px; /* Aumentamos el padding vertical y horizontal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px; /* Borde redondeado */
+    box-shadow: 0 0 10px 3px #1aa4e4; /* Efecto neón celeste fijo */
+    min-height: 80px; /* Añadimos una altura mínima para el banner */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    max-height: 120px; /* Aumentamos la altura máxima */
+    margin-right: 15px;
+    height: 90px; /* Aumentamos la altura */
+}
+
+.logo-container h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #000000; /* El color del texto sigue siendo blanco */
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow:
+        -1px -1px 5px #1aa4e4, /* Neón celeste superior izquierda */
+        1px -1px 5px #1aa4e4,  /* Neón celeste superior derecha */
+        -1px 1px 5px #1aa4e4,  /* Neón celeste inferior izquierda */
+        1px 1px 5px #1aa4e4,   /* Neón celeste inferior derecha */
+        0 0 10px #1aa4e4;    /* Neón celeste más intenso general */
+}
+
+.banner .navbar .nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.banner .navbar .nav-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.banner .navbar .nav-container ul li {
+    margin-left: 20px;
+}
+
+.banner .navbar .nav-container ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.banner .navbar .nav-container .nav-icon {
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* nav */
+
+.navbar {
+    background-color: transparent !important; /* Hacer el fondo del navbar transparente */
+    padding: 10px 20px; /* Ajustar el padding del navbar */
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-collapse {
+    justify-content: flex-end !important; /* Asegurar la alineación a la derecha */
+}
+
+.navbar .nav-pills .nav-link {
+    background-color: #000; /* Fondo negro para las píldoras */
+    color: #fff; /* Texto blanco para contraste */
+    border: 1px solid #555; /* Bordes grises pequeños */
+    border-radius: 20px; /* Bordes más redondeados */
+    margin-left: 5px;
+    padding: 8px 15px;
+    font-family: 'Lobster', cursive; /* Cambiamos la fuente a Lobster */
+    transition: box-shadow 0.3s ease; /* Transición suave para el efecto neón */
+}
+
+.navbar .nav-pills .nav-link.active,
+.navbar .nav-pills .nav-link:hover {
+    background-color: #000; /* Mantenemos el fondo negro */
+    color: #fff;
+    font-family: 'Lobster', cursive; /* También puedes aplicar la fuente al estado activo/hover */
+    box-shadow: 0 0 10px #3498db, 0 0 20px #3498db; /* Efecto neón azul al hacer hover o estar activo */
+    border-color: #3498db; /* Cambiamos el color del borde al azul al hacer hover/activo */
+}
+
+.navbar .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo-container img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.navbar .logo-container h1 {
+    font-size: 2em;
+    margin: 0;
+    font-family: 'Bungee Spice', sans-serif;
+    color: #333;
+}
+.banner > .navbar {
+    background-color: transparent !important;
+}
+
+/* Components */
+
+/* featuredSections */
+
+.container.mt-5 {
+    margin-top: 120px !important; /* Ajusta este valor según la distancia que desees */
+}
+
+.neon-border {
+    border: 2px solid;
+    border-color: #00FFFF; /* Celeste neón inicial */
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.neon-border:hover {
+    border-color: #00FF00; /* Verde neón al hacer hover */
+    box-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00;
+}
+
+.animated-card {
+    opacity: 0;
+    transform: translateY(20px); /* Inicialmente un poco abajo */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animated-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+.animated-card:hover {
+    transform: translateY(-5px); /* Levanta ligeramente al pasar el cursor */
+}
+
+.middle-card {
+    margin-top: -30px !important; /* Ajusta este valor para subir la tarjeta central */
+}
+/* _featured-sections.css */
+/* ... otros estilos ... */
+
+.card.neon-border {
+    background-color: #000 !important; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    border: 2px solid #00FFFF; /* Mantenemos el borde neón */
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF; /* Mantenemos la sombra neón */
+    border-radius: 8px; /* Si lo deseas */
+}
+.card-title {
+    color: #00FFFF; /* Manteniendo el título celeste */
+}
+/* _featured-sections.css */
+/* ... otros estilos ... */
+
+.card.neon-border {
+    background-color: #000 !important; /* Fondo negro */
+    color: #fff !important; /* Texto blanco */
+    border: 1px solid #00FFFF !important; /* Borde celeste */
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF; /* Mantenemos la sombra neón */
+    border-radius: 8px; /* Si lo deseas */
+}
+
+.card.neon-border .card-title {
+    color: #00FFFF !important; /* Título celeste */
+}
+
+.card.neon-border .card-text {
+    color: #fff !important; /* Texto blanco */
+}
+
+.card.neon-border .card-link {
+    color: #00FFFF !important; /* Enlace celeste */
+}
+
+
+ /* fomr */
+
+/* _form.css */
+.form-container {
+    background-color: black; /* Fondo negro */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 700px; /* Aumentamos un poco el ancho máximo para Bootstrap */
+    margin: 2rem auto;
+}
+
+.form-container h1 {
+    color: #00FFFF; /* Texto del título celeste */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: "Poetsen One", sans-serif; /* Manteniendo la fuente del título */
+    font-weight: 400;
+    font-style: normal;
+}
+
+.border-info { /* Clase para bordes celestes (si Bootstrap no lo aplica directamente) */
+    border-color: #00FFFF !important;
+}
+
+.text-info { /* Clase para texto celeste (si Bootstrap no lo aplica directamente) */
+    color: #00FFFF !important;
+}
+
+.bg-dark { /* Clase para fondo negro (si Bootstrap no lo aplica directamente) */
+    background-color: black !important;
+}
+
+.btn-info { /* Estilo para el botón de envío */
+    background-color: #00FFFF;
+    color: black;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    border: none; /* Opcional: quitar el borde del botón */
+}
+
+.btn-info:hover {
+    background-color: #00b3cc; /* Un tono más oscuro al hacer hover */
+}
+
+.form-check-input:checked { /* Estilo para los checkboxes y radios checked */
+    background-color: #00FFFF;
+    border-color: #00FFFF;
+}
+
+.form-check-input:focus { /* Estilo al enfocar checkboxes y radios */
+    border-color: #00FFFF;
+    box-shadow: 0 0 0 0.25rem rgba(0, 255, 255, 0.25);
+}
+
+.form-select option {
+    background-color: black; /* Fondo negro para las opciones del select */
+    color: #00FFFF; /* Texto celeste para las opciones del select */
+}
+
+.form-select:focus {
+    border-color: #00FFFF;
+    box-shadow: 0 0 0 0.25rem rgba(0, 255, 255, 0.25);
+}
+
+.form-control:focus {
+    border-color: #00FFFF;
+    box-shadow: 0 0 0 0.25rem rgba(0, 255, 255, 0.25);
+}
+
+.form-check-input {
+    border: 1px solid #00FFFF; /* Borde celeste para checkboxes y radios */
+}   
+
+/* hero */ 
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: auto;
+    padding: 40px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.hero {
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    opacity: 0.7;
+    padding: 80px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Capa oscura */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: lighter;
+}
+
+.hero .cta-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    opacity: 2; /* Ajusta este valor según tu preferencia */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Sombra inicial sutil */
+}
+
+.hero .cta-button:hover {
+    background-color: #2980b9;
+    opacity: 1;
+    box-shadow: 0 0 15px 5px #00FFFF; /* Sombra neón celeste al hacer hover */
+}
+.hero:hover {
+    box-shadow: 0 0 15px 5px #1aa4e4;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.hero-wrapper {
+    background: transparent; /* Hacemos el fondo transparente */
+    opacity: 1;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 5px 15px 5px #1aa4e4;
+}
+
+.hero-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* newsUpdates */
+
+/* _news-updates.css */
+.custom-map-card-column {
+    margin-top: 20px; /* Ajusta este valor para mover la tarjeta hacia abajo */
+}
+
+/* Para aplicar el margen solo en pantallas grandes */
+@media (min-width: 992px) {
+    .custom-map-card-column {
+        margin-top: 30px; /* Ajusta este valor para pantallas grandes */
+    }
+}
+.news-updates {
+    text-align: center;
+    padding: 40px 20px;
+    /* background-color: transparent; */
+    margin: 120px auto 20px; /* Aumentamos el margen superior a 60px */
+    max-width: 1200px;
+    border-radius: 10px;
+    border: 2px solid #00FFFF;
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.news-updates .col-md-9 .row .col .card {
+    background-color: #000; /* Fondo negro */
+    border: 1px solid #00FFFF; /* Borde celeste */
+    color: #fff; /* Opcional: cambia el color del texto dentro de la tarjeta a blanco para que contraste */
+}
+
+.news-updates .col-md-9 .row .col .card .card-title {
+    color: #00FFFF; /* Opcional: cambia el color del título de la tarjeta a celeste */
+}
+
+.news-updates .col-md-9 .row .col .card .card-link {
+    color: #00FFFF; /* Opcional: cambia el color del enlace a celeste */
+}
+.news-updates .col-md-3 .card {
+    background-color: #000; /* Fondo negro */
+    border: 1px solid #00FFFF; /* Borde celeste */
+    color: #fff; /* Opcional: cambia el color del texto dentro de la tarjeta a blanco */
+}
+
+.news-updates .col-md-3 .card .card-title {
+    color: #00FFFF; /* Opcional: cambia el color del título a celeste */
+}
+
+.news-updates .col-md-3 .card .card-text {
+    color: #fff; /* Opcional: cambia el color del texto de la descripción a blanco */
+}
+
+.news-updates .col-md-3 .card .btn-outline-warning {
+    color: #00FFFF; /* Cambia el color del texto del botón a celeste */
+    border-color: #00FFFF; /* Cambia el color del borde del botón a celeste */
+}
+
+.news-updates .col-md-3 .card iframe {
+    border-color: #00FFFF; /* Opcional: si quieres un borde en el iframe también */
+}
+
+/* sectionDivider */
+
+.section-divider {
+    width: 100%; /* Para que ocupe todo el ancho */
+    height: 1px;
+    background-color: #000000; /* Asegúrate de que el color sea el deseado */
+    margin: 60px 0; /* Ajustamos los márgenes superior e inferior y eliminamos los horizontales automáticos */
+}
+
+/* Pages */
+
+/* enfrentamientos */
+/* enfrentamientos.css */
+.content-enfrentamientos h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 40px; /* Añade un margen superior para separarlo del banner */
+    margin-bottom: 20px; /* Opcional: añade un margen inferior para separarlo de la tabla */
+    color: #00FFFF; /* Mantiene el color del texto claro (si lo prefieres) */
+    font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tabla-enfrentamientos {
+    width: 80%; /* Reducimos el ancho al 80% del contenedor */
+    margin: 20px auto; /* Centramos horizontalmente y añadimos margen vertical */
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    color: #f8f9fa;
+    border: 1px solid #00FFFF; /* Borde principal celeste */
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.9em; /* Opcional: reducir el tamaño de la fuente */
+}
+
+.tabla-enfrentamientos th,
+.tabla-enfrentamientos td {
+    padding: 8px 10px; /* Reducimos el padding de las celdas */
+    text-align: left;
+    border-bottom: 1px solid #00FFFF; /* Borde inferior celeste */
+}
+
+.tabla-enfrentamientos th {
+    background-color: #2c3034;
+    color: #00FFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tabla-enfrentamientos tbody tr:hover {
+    background-color: #343a40;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.tabla-enfrentamientos tbody td:nth-child(2),
+.tabla-enfrentamientos tbody td:nth-child(7) {
+    text-align: center;
+}
+
+.tabla-enfrentamientos tbody tr:nth-child(even) {
+    background-color: #25282b;
+}
+
+.tabla-enfrentamientos tbody td:nth-child(7):not(:empty) {
+    color: #00FF00;
+    font-weight: bold;
+}
+
+
+/* participantes */
+
+/* participantes.css */
+
+.content-participantes h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #00FFFF;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tabla-posiciones {
+    width: 70%; /* Ancho inicial de la tabla de posiciones */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #1e1e1e; /* Fondo negro */
+    color: #f8f9fa; /* Texto claro */
+    border: 1px solid #00FFFF; /* Borde principal celeste */
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.9em;
+}
+
+.tabla-posiciones th,
+.tabla-posiciones td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #00FFFF; /* Borde inferior celeste */
+}
+
+.tabla-posiciones th {
+    background-color: #2c3034;
+    color: #00FFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.tabla-posiciones tbody tr:hover {
+    background-color: #343a40;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.tabla-posiciones tbody td:nth-child(2), /* Centra la columna de "Equipo" */
+.tabla-posiciones tbody td:nth-child(3) { /* Centra la columna de "Puntos Totales" */
+    text-align: center;
+}
+
+.tabla-posiciones tbody tr:nth-child(even) {
+    background-color: #25282b;
+}
+
+/* Estilos para la numeración */
+.tabla-posiciones tbody tr {
+    counter-increment: row-num;
+}
+
+.tabla-posiciones tbody td:nth-child(1)::before {
+    content: counter(row-num);
+    display: block;
+    text-align: center;
+    min-width: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.tabla-posiciones tbody td:nth-child(1) {
+    width: 30px;
+    text-align: center;
+}
+
+/* premios */
+
+/* _premios.css */
+
+
+.titulo-banner-font {
+    color: #00FFFF;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.premio-card {
+    background-color: #000 !important; /* Fondo negro */
+    color: #fff !important; /* Texto blanco para contraste */
+    border: 1px solid #00FFFF !important; /* Borde celeste */
+    border-radius: 10px; /* O el radio de borde que prefieras */
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.1); /* Sutil sombra celeste */
+}
+
+.premio-card .card-title {
+    color: #00FFFF !important; /* Título del premio en celeste */
+}
+
+.premio-card .card-text {
+    color: #f8f9fa !important; /* Descripción del premio en un blanco suave */
+}
+
+.premio-card .btn-outline-warning,
+.premio-card .btn-outline-info,
+.premio-card .btn-outline-success {
+    color: #00FFFF !important; /* Texto del botón celeste */
+    border-color: #00FFFF !important; /* Borde del botón celeste */
+}
+
+.premio-card .btn-outline-warning:hover,
+.premio-card .btn-outline-info:hover,
+.premio-card .btn-outline-success:hover {
+    background-color: #00FFFF !important; /* Fondo celeste al hacer hover */
+    color: #000 !important; /* Texto negro al hacer hover */
+}
+
+.premio-card .collapse .card-body {
+    background-color: #1e1e1e !important; /* Fondo más oscuro para los detalles */
+    color: #ced4da !important; /* Texto gris claro para los detalles */
+    border: 1px solid #00FFFF; /* Borde celeste para los detalles */
+}
+
+
+
