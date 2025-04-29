@@ -35,7 +35,7 @@ body::before {
     z-index: -1;
 }
 
-/* ... el resto de tu _base.css ... */
+
 a {
     text-decoration: none;
     color: inherit;
@@ -48,7 +48,7 @@ ul {
 }
 
 .home {
-    /* El fondo ahora está en body */
+  
     color: white; /* Color del texto en la página principal */
 }
 
@@ -103,7 +103,7 @@ footer {
 .logo-container h1 {
     margin: 0;
     font-size: 2em;
-    color: #000000; /* El color del texto sigue siendo blanco */
+    color: #000000; 
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -204,8 +204,7 @@ footer {
 /* featuredSections */
 
 .container.mt-5 {
-    margin-top: 120px !important; /* Ajusta este valor según la distancia que desees */
-}
+    margin-top: 120px !important; 
 
 .neon-border {
     border: 2px solid;
@@ -221,7 +220,7 @@ footer {
 
 .animated-card {
     opacity: 0;
-    transform: translateY(20px); /* Inicialmente un poco abajo */
+    transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
@@ -230,14 +229,14 @@ footer {
     transform: translateY(0);
 }
 .animated-card:hover {
-    transform: translateY(-5px); /* Levanta ligeramente al pasar el cursor */
+    transform: translateY(-5px); 
 }
 
 .middle-card {
-    margin-top: -30px !important; /* Ajusta este valor para subir la tarjeta central */
+    margin-top: -30px !important; 
 }
 /* _featured-sections.css */
-/* ... otros estilos ... */
+
 
 .card.neon-border {
     background-color: #000 !important; /* Fondo negro */
@@ -250,7 +249,7 @@ footer {
     color: #00FFFF; /* Manteniendo el título celeste */
 }
 /* _featured-sections.css */
-/* ... otros estilos ... */
+
 
 .card.neon-border {
     background-color: #000 !important; /* Fondo negro */
@@ -295,15 +294,15 @@ footer {
     font-style: normal;
 }
 
-.border-info { /* Clase para bordes celestes (si Bootstrap no lo aplica directamente) */
+.border-info { 
     border-color: #00FFFF !important;
 }
 
-.text-info { /* Clase para texto celeste (si Bootstrap no lo aplica directamente) */
+.text-info { 
     color: #00FFFF !important;
 }
 
-.bg-dark { /* Clase para fondo negro (si Bootstrap no lo aplica directamente) */
+.bg-dark { 
     background-color: black !important;
 }
 
@@ -435,7 +434,7 @@ footer {
     margin-top: 20px; /* Ajusta este valor para mover la tarjeta hacia abajo */
 }
 
-/* Para aplicar el margen solo en pantallas grandes */
+
 @media (min-width: 992px) {
     .custom-map-card-column {
         margin-top: 30px; /* Ajusta este valor para pantallas grandes */
@@ -455,28 +454,28 @@ footer {
 .news-updates .col-md-9 .row .col .card {
     background-color: #000; /* Fondo negro */
     border: 1px solid #00FFFF; /* Borde celeste */
-    color: #fff; /* Opcional: cambia el color del texto dentro de la tarjeta a blanco para que contraste */
+    color: #fff; 
 }
 
 .news-updates .col-md-9 .row .col .card .card-title {
-    color: #00FFFF; /* Opcional: cambia el color del título de la tarjeta a celeste */
+    color: #00FFFF; 
 }
 
 .news-updates .col-md-9 .row .col .card .card-link {
-    color: #00FFFF; /* Opcional: cambia el color del enlace a celeste */
+    color: #00FFFF; 
 }
 .news-updates .col-md-3 .card {
     background-color: #000; /* Fondo negro */
     border: 1px solid #00FFFF; /* Borde celeste */
-    color: #fff; /* Opcional: cambia el color del texto dentro de la tarjeta a blanco */
+    color: #fff; 
 }
 
 .news-updates .col-md-3 .card .card-title {
-    color: #00FFFF; /* Opcional: cambia el color del título a celeste */
+    color: #00FFFF; 
 }
 
 .news-updates .col-md-3 .card .card-text {
-    color: #fff; /* Opcional: cambia el color del texto de la descripción a blanco */
+    color: #fff; 
 }
 
 .news-updates .col-md-3 .card .btn-outline-warning {
@@ -485,7 +484,7 @@ footer {
 }
 
 .news-updates .col-md-3 .card iframe {
-    border-color: #00FFFF; /* Opcional: si quieres un borde en el iframe también */
+    border-color: #00FFFF; 
 }
 
 /* sectionDivider */
@@ -493,7 +492,7 @@ footer {
 .section-divider {
     width: 100%; /* Para que ocupe todo el ancho */
     height: 1px;
-    background-color: #000000; /* Asegúrate de que el color sea el deseado */
+    background-color: #000000; 
     margin: 60px 0; /* Ajustamos los márgenes superior e inferior y eliminamos los horizontales automáticos */
 }
 
@@ -504,7 +503,7 @@ footer {
 .content-enfrentamientos h1 {
     text-align: center; /* Centra el texto horizontalmente */
     margin-top: 40px; /* Añade un margen superior para separarlo del banner */
-    margin-bottom: 20px; /* Opcional: añade un margen inferior para separarlo de la tabla */
+    margin-bottom: 20px; 
     color: #00FFFF; /* Mantiene el color del texto claro (si lo prefieres) */
     font-family: "Poetsen One", sans-serif;
   font-weight: 400;
@@ -520,7 +519,7 @@ footer {
     border: 1px solid #00FFFF; /* Borde principal celeste */
     border-radius: 8px;
     overflow: hidden;
-    font-size: 0.9em; /* Opcional: reducir el tamaño de la fuente */
+    font-size: 0.9em;
 }
 
 .tabla-enfrentamientos th,
@@ -650,7 +649,7 @@ footer {
     background-color: #000 !important; /* Fondo negro */
     color: #fff !important; /* Texto blanco para contraste */
     border: 1px solid #00FFFF !important; /* Borde celeste */
-    border-radius: 10px; /* O el radio de borde que prefieras */
+    border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 255, 255, 0.1); /* Sutil sombra celeste */
 }
 
@@ -659,7 +658,7 @@ footer {
 }
 
 .premio-card .card-text {
-    color: #f8f9fa !important; /* Descripción del premio en un blanco suave */
+    color: #f8f9fa !important; 
 }
 
 .premio-card .btn-outline-warning,
@@ -681,6 +680,5 @@ footer {
     color: #ced4da !important; /* Texto gris claro para los detalles */
     border: 1px solid #00FFFF; /* Borde celeste para los detalles */
 }
-
 
 
